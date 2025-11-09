@@ -10,7 +10,7 @@ from schemas.aircraft_type import AircraftTypeSchema
 class AircraftSchema(Schema):
     id: UUID
     tail_number: str
-    model: AircraftTypeSchema
+    aircraft_type: AircraftTypeSchema
     year: Optional[int] = None
 
 
@@ -20,11 +20,11 @@ class AircraftSchemaList(RootModel):
 
 class SubmitAircraftSchema(Schema):
     tail_number: str
-    model: UUID
+    aircraft_type: UUID
     year: Optional[int] = None
 
 
 class UpdateAircraftSchema(Schema):
     tail_number: Optional[str] = None
-    model: Optional[UUID] = None
+    aircraft_type: Optional[UUID] = None
     year: Optional[int] = None
