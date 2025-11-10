@@ -28,3 +28,10 @@ class UpdateAircraftSchema(Schema):
     tail_number: Optional[str] = None
     aircraft_type: Optional[UUID] = None
     year: Optional[int] = None
+
+
+class AircraftFilterSchema(Schema):
+    id: Optional[UUID] = None
+    tail_number: Optional[str] = None
+    aircraft_type: Optional[UUID] = None
+    year: Optional[int] = None
