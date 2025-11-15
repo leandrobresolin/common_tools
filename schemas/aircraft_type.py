@@ -41,3 +41,11 @@ class UpdateAircraftTypeSchema(Schema):
     manufacturer: Optional[str] = None
     energy_type: Optional[EnergyTypeEnum] = None
     model_type: Optional[ModelTypeEnum] = None
+
+
+class AircraftTypeFilterSchema(Schema):
+    id: Optional[UUID] = None
+    name: Optional[str] = None
+    manufacturer: Optional[str] = None
+    energy_type: Optional[EnergyTypeEnum] = None
+    model_type: Optional[ModelTypeEnum] = None
