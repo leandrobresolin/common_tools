@@ -3,6 +3,7 @@ from typing import Optional
 from uuid import UUID
 
 from ninja import Schema
+from pydantic import RootModel
 
 
 class EnergyTypeEnum(str, Enum):
@@ -22,6 +23,10 @@ class AircraftTypeSchema(Schema):
     manufacturer: Optional[str] = None
     energy_type: EnergyTypeEnum
     model_type: ModelTypeEnum
+
+
+class AircraftTypeSchemaList(RootModel):
+    root: list[AircraftTypeSchema]
 
 
 class SubmitAircraftTypeSchema(Schema):
