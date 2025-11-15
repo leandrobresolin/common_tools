@@ -2,7 +2,7 @@ from typing import Optional
 from uuid import UUID
 
 from ninja import Schema
-from pydantic import RootModel
+from pydantic import ConfigDict, RootModel
 
 from schemas.aircraft_type import AircraftTypeSchema
 
@@ -12,6 +12,8 @@ class AircraftSchema(Schema):
     tail_number: str
     aircraft_type: AircraftTypeSchema
     year: Optional[int] = None
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class AircraftSchemaList(RootModel):

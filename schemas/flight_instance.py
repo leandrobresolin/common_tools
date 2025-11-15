@@ -4,6 +4,7 @@ from typing import Optional
 from uuid import UUID
 
 from ninja import Schema
+from pydantic import ConfigDict
 
 from schemas.aircraft import AircraftSchema
 from schemas.route import RouteSchema
@@ -27,3 +28,5 @@ class FlightInstanceSchema(Schema):
     arrival_vertiport: Optional[VertiportSchema] = None
     scheduled_departure_datetime: datetime
     scheduled_arrival_datetime: datetime
+
+    model_config = ConfigDict(from_attributes=True)

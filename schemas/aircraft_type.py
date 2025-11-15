@@ -3,7 +3,7 @@ from typing import Optional
 from uuid import UUID
 
 from ninja import Schema
-from pydantic import RootModel
+from pydantic import ConfigDict, RootModel
 
 
 class EnergyTypeEnum(str, Enum):
@@ -23,6 +23,8 @@ class AircraftTypeSchema(Schema):
     manufacturer: Optional[str] = None
     energy_type: EnergyTypeEnum
     model_type: ModelTypeEnum
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class AircraftTypeSchemaList(RootModel):

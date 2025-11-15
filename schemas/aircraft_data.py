@@ -3,6 +3,7 @@ from typing import Optional
 from uuid import UUID
 
 from ninja import Schema
+from pydantic import ConfigDict
 
 from schemas.aircraft import AircraftSchema
 
@@ -17,3 +18,5 @@ class AircraftDataSchema(Schema):
     energy_level: Optional[float] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
+
+    model_config = ConfigDict(from_attributes=True)
