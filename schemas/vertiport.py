@@ -10,8 +10,8 @@ class VertiportSchema(Schema):
     id: UUID
     vertiport_code: str
     vertiport_name: str
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
+    latitude: float
+    longitude: float
     altitude: Optional[float] = None
     created_at: datetime
 
@@ -25,8 +25,8 @@ class VertiportSchemaList(RootModel):
 class SubmitVertiportSchema(Schema):
     vertiport_code: str
     vertiport_name: str
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
+    latitude: float
+    longitude: float
     altitude: Optional[float] = None
 
 
