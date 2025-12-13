@@ -55,7 +55,7 @@ class UpdateWaypointSchema(Schema):
     sequence_order: Optional[float] = None
 
 
-class WaipointFilterSchema(Schema):
+class WaypointFilterSchema(Schema):
     id: Optional[UUID] = None
     route: Optional[UUID] = None
     vertiport: Optional[UUID] = None
