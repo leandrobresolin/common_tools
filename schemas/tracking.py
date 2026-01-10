@@ -41,6 +41,19 @@ class SubmitTrackingSchema(Schema):
     updated_at: Optional[datetime] = None
 
 
+class UpdateTrackingSchema(Schema):
+    flight_instance: Optional[UUID] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    altitude: Optional[float] = None
+    speed: Optional[float] = None
+    energy_level: Optional[float] = None
+    active: Optional[bool] = None
+    started_at: Optional[datetime] = None
+    finished_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+
+
 class TrackingFilterSchema(Schema):
     id: Optional[UUID] = None
     flight_instance: Optional[UUID] = None
