@@ -3,7 +3,7 @@ from typing import Optional
 from uuid import UUID
 
 from ninja import Schema
-from pydantic import ConfigDict
+from pydantic import ConfigDict, RootModel
 
 from schemas.flight_instance import FlightInstanceSchema
 
@@ -20,6 +20,10 @@ class AircraftDataSchema(Schema):
     updated_at: Optional[datetime] = None
 
     model_config = ConfigDict(from_attributes=True)
+
+
+class AircraftDataSchemaList(RootModel):
+    root: list[AircraftDataSchema]
 
 
 class AircraftDataFilterSchema(Schema):
