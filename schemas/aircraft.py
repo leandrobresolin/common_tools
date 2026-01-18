@@ -25,12 +25,14 @@ class SubmitAircraftSchema(Schema):
     tail_number: str
     aircraft_type: UUID
     year: Optional[int] = None
+    energy_fuel: Optional[int] = None
 
 
 class UpdateAircraftSchema(Schema):
     tail_number: Optional[str] = None
     aircraft_type: Optional[UUID] = None
     year: Optional[int] = None
+    energy_fuel: Optional[int] = None
 
 
 class AircraftFilterSchema(Schema):
