@@ -12,6 +12,7 @@ class AircraftSchema(Schema):
     tail_number: str
     aircraft_type: AircraftTypeSchema
     year: Optional[int] = None
+    energy_fuel: Optional[int] = None
 
     model_config = ConfigDict(from_attributes=True)
 
