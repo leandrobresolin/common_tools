@@ -12,7 +12,7 @@ class AircraftSchema(Schema):
     tail_number: str
     aircraft_type: AircraftTypeSchema
     year: Optional[int] = None
-    energy_fuel: Optional[int] = None
+    energy_fuel: Optional[float] = None
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -25,14 +25,14 @@ class SubmitAircraftSchema(Schema):
     tail_number: str
     aircraft_type: UUID
     year: Optional[int] = None
-    energy_fuel: Optional[int] = None
+    energy_fuel: Optional[float] = None
 
 
 class UpdateAircraftSchema(Schema):
     tail_number: Optional[str] = None
     aircraft_type: Optional[UUID] = None
     year: Optional[int] = None
-    energy_fuel: Optional[int] = None
+    energy_fuel: Optional[float] = None
 
 
 class AircraftFilterSchema(Schema):
