@@ -29,5 +29,6 @@ class AircraftDataSchemaList(RootModel):
 class AircraftDataFilterSchema(Schema):
     id: Optional[UUID] = None
     flight_instance: Optional[UUID] = None
+    aircraft: Optional[UUID] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
