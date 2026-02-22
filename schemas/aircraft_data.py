@@ -32,3 +32,5 @@ class AircraftDataFilterSchema(Schema):
     aircraft: Optional[str] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
+    created_from: Optional[datetime] = None
+    created_to: Optional[datetime] = None
